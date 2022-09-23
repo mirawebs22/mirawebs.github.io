@@ -55,12 +55,19 @@ function fb_initial_checkout() {
 
 
 function fb_add_to_cart() {
-    fbq('track', 'AddToCart', {
-        content_name: 'Really Fast Running Shoes', 
-        content_category: 'Apparel & Accessories > Shoes',
-        content_ids: ['1234'],
-        content_type: 'product',
-        value: 4.99,
-        currency: 'USD' 
-      });
+  fbq('track', 'AddToCart');
+  console.log("Facebook Add to Cart event triggered!");
+    // fbq('track', 'AddToCart', {
+    //     content_name: 'Really Fast Running Shoes', 
+    //     content_category: 'Apparel & Accessories > Shoes',
+    //     content_ids: ['1234'],
+    //     content_type: 'product',
+    //     value: 4.99,
+    //     currency: 'USD' 
+    //   });
+}
+
+function fb_contact() {
+  fbq('track', 'Contact');
+  console.log("Facebook Contact event triggered!");
 }
