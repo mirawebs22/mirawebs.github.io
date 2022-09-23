@@ -47,6 +47,13 @@ function fb_purchase() {
     //   );
 }
 
+function fb_initial_checkout() {
+  fbq('track', 'InitiateCheckout');
+  console.log("Facebook Initial Checkout Event Triggered!");
+}
+
+
+
 function fb_add_to_cart() {
     fbq('track', 'AddToCart', {
         content_name: 'Really Fast Running Shoes', 
