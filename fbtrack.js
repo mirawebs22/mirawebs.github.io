@@ -18,29 +18,33 @@ function fb_view_content() {
 
 
 function fb_search() {
-    fbq(
-        'track', 'Search', { 
-          search_string: 'leather sandals',
-          content_category: 'Product Search',
-          content_ids: ['1234', '2424', '1318', '6832'],
-          value: 0.50,
-          currency: 'USD'
-        }
-      );
+  fbq('track', 'Search');
+  console.log("Facebook Search Event Triggered!");
+    // fbq(
+    //     'track', 'Search', { 
+    //       search_string: 'leather sandals',
+    //       content_category: 'Product Search',
+    //       content_ids: ['1234', '2424', '1318', '6832'],
+    //       value: 0.50,
+    //       currency: 'USD'
+    //     }
+    //   );
 }
 
 function fb_purchase() {
-    fbq(
-        'track', 'Purchase', { 
-          content_type: 'product',
-          contents: [
-            { 'id': '1234', 'quantity': 2, },
-            { 'id': '4642', 'quantity': 1, }
-          ],
-          value: 25.00,
-          currency: 'USD'
-        }
-      );
+  fbq('track', 'Purchase', { value: 0.00, currency: 'USD' });
+  console.log("Facebook Purchase Event Triggered!");
+    // fbq(
+    //     'track', 'Purchase', { 
+    //       content_type: 'product',
+    //       contents: [
+    //         { 'id': '1234', 'quantity': 2, },
+    //         { 'id': '4642', 'quantity': 1, }
+    //       ],
+    //       value: 25.00,
+    //       currency: 'USD'
+    //     }
+    //   );
 }
 
 function fb_add_to_cart() {
