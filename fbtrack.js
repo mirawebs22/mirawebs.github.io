@@ -1,14 +1,16 @@
 function fb_view_content() {
-    fbq(
-        'track', 'ViewContent', { 
-          content_type: 'product',
-          content_ids: ['1234'],
-          content_name: 'ABC Leather Sandal',
-          content_category: 'Shoes'
-          value: 0.50,
-          currency: 'USD'
-        }
-    );
+
+  fbq('track', 'ViewContent');
+    // fbq(
+    //     'track', 'ViewContent', { 
+    //       content_type: 'product',
+    //       content_ids: ['1234'],
+    //       content_name: 'ABC Leather Sandal',
+    //       content_category: 'Shoes'
+    //       value: 0.50,
+    //       currency: 'USD'
+    //     }
+    // );
     console.log("View Content Triggered!");
 
 
